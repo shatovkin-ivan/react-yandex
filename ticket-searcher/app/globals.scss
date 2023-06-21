@@ -1,0 +1,94 @@
+:root {
+    --sf: 'SF Pro';
+    --main-font: 'Roboto';
+
+    --main-text-color: #1B1F23;
+    --dark-theme-color: #333;
+    --light-theme-color: #fff;
+    --body-color: #F5F5F5;
+
+}
+@font-face {
+    font-family: 'SF Pro';
+    src: url('../assets/fonts/sfprotext-regular-webfont.woff2') format('woff2'),
+         url('../assets/fonts/sfprotext-regular-webfont.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Roboto';
+    src: url('../assets/fonts/roboto-bold-webfont.woff2') format('woff2'),
+         url('../assets/fonts/roboto-bold-webfont.woff') format('woff');
+    font-weight: 600;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Roboto';
+    src: url('../assets/fonts/roboto-medium-webfont.woff2') format('woff2'),
+         url('../assets/fonts/roboto-medium-webfont.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Roboto';
+    src: url('../assets/fonts/roboto-italic-webfont.woff2') format('woff2'),
+         url('../assets/fonts/roboto-italic-webfont.woff') format('woff');
+    font-weight: 400;
+    font-style: italic;
+}
+@font-face {
+    font-family: 'Roboto';
+    src: url('../assets/fonts/roboto-regular-webfont.woff2') format('woff2'),
+         url('../assets/fonts/roboto-regular-webfont.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+}
+
+html {
+    font-size: 62.5%;
+}
+body {
+    margin: 0;
+    width: 100%;
+    background-color: var(--body-color);
+}
+* {
+    box-sizing: border-box;
+    font: normal 400 1.6rem/1.2 var(--main-font), sans-serif;
+}
+a {
+    text-decoration: none;
+    color: inherit;
+    font-size: inherit;
+    line-height: inherit;
+}
+ul {
+    padding: 0;
+    margin: 0;
+}
+li {
+    list-style-type: none;
+}
+img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+.main {
+    padding-top: 84px;
+}
+.container {
+    max-width: 1964px;
+    width: 100%;
+    padding: 0 22px;
+}
+
+.dark {
+    background-color: var(--dark-theme-color);
+    color: var(--light-theme-color);
+}
+.light {
+    background-color: var(--light-theme-color);
+    color: var(--main-text-color);
+}
+

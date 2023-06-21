@@ -1,0 +1,19 @@
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding: 26px 0;
+    width: 100vw;
+    &__wrap {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    &__logo {
+        max-width: 240px;
+        height: 36px;
+        & :is(img) {
+            height: 100%;
+        }
+    }
+}

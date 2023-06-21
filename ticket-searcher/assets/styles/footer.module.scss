@@ -1,0 +1,15 @@
+.footer {
+    padding: 24px 0;
+}
+
+.navigation {
+    &__list {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    &__item {
+        font-size: 2rem;
+        line-height: 1.15;
+    }
+}
