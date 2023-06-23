@@ -1,5 +1,7 @@
 import styles from '../../assets/styles/HomePage/card.module.scss'
 
+import { CatalogAmount } from './CatalogAmount'
+
 export const CatalogItem = ({film}) => {
     return (
         <li className={`${styles.filmCard} light`}>
@@ -14,9 +16,7 @@ export const CatalogItem = ({film}) => {
                     {film.genre}
                 </p>
             </div>
-            <div className={styles.filmCard__buttons}>
-                
-            </div>
+            <CatalogAmount id={film.id}/>
         </li>
     )
 }

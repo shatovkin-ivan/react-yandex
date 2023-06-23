@@ -6,6 +6,8 @@
     --dark-theme-color: #333;
     --light-theme-color: #fff;
     --body-color: #F5F5F5;
+    --orange: #FF5500;
+    --orange-disabled: #FFA375;
 
 }
 @font-face {
@@ -76,6 +78,10 @@ img {
     display: block;
     width: 100%;
     height: auto;
+}
+button {
+    cursor: pointer;
+    display: block;
 }
 .main {
     padding-top: 84px;
