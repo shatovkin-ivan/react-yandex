@@ -5,23 +5,15 @@ import styles from '../../assets/styles/HomePage/catalog.module.scss'
 import { useState, useEffect } from "react"
 import { CatalogItem } from "./CatalogItem"
 
+import { useGetMoviesQuery } from '../../store/services/movieApi'
+
 export const TheCatalog = () => {
-    const [films, setFilms] = useState(null)
-
-    useEffect(() => {
-        const fetchData = async () => {
-            const response = await fetch('http://localhost:3001/api/movies')
-            const res = await response.json()
-
-            setFilms(res)
-        }
-        fetchData();
-    }, []);
+    const { data, isLoading, error } = useGetMoviesQuery()
 
     return (
         <ul className={styles.catalog}>
             {
-                films && films.map((filmItem) => {
+                data && data.map((filmItem) => {
                     return (
                         <CatalogItem key={filmItem.id} film={filmItem}/>
                     )

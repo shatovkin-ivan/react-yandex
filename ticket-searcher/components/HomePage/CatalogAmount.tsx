@@ -24,7 +24,7 @@ export const CatalogAmount = ({id}) => {
                 />
             </button>
             <span className={styles.buttons__amount}>{productAmount}</span>
-            <button type="button" className={styles.buttons__item} onClick={() => dispatch(cartActions.increment(id))}>
+            <button type="button" className={styles.buttons__item} disabled={productAmount >= 30} onClick={() => dispatch(cartActions.increment(id))}>
                 <Image
                     priority
                     src={ plusIcon }

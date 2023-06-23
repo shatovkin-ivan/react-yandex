@@ -1,8 +1,8 @@
 .section {
-    padding: 24px 0;
+    padding: var(--default-padding) 0;
     &__wrap {
         display: grid;
         grid-template-columns: 408px auto;
-        gap: 23px;
+        gap: var(--default-padding);
     }
 }
