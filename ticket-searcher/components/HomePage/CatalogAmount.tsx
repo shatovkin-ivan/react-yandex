@@ -13,7 +13,7 @@ export const CatalogAmount = ({id}) => {
     const productAmount = useSelector((state) => 
         selectProductAmount(state, id)
     )
-
+    
     return (
         <div className={`${styles.buttons}`}>
             <button type="button" className={styles.buttons__item} disabled={!productAmount} onClick={() => dispatch(cartActions.decrement(id))}>

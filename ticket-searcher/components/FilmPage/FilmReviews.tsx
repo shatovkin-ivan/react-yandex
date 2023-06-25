@@ -15,8 +15,6 @@ export const FilmReviews = ({film}) => {
         })
     }, [])
 
-    console.log(reviews);
-    
     return (
         <section className={styles.reviews}>
             <div className="container">
