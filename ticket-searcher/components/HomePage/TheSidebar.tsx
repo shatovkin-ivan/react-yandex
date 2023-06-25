@@ -12,7 +12,13 @@ import arrowIcon from '../../public/icons/arrow-icon.svg'
 const MenuContext = React.createContext(false)
 const GroupContext = React.createContext(false)
 
-const MenuDropDown = ({ children }) => {
+type Props = {
+    children: JSX.Element,
+    title: string,
+    placeholder: string
+}
+
+const MenuDropDown = ({ children }: Props) => {
     const [activeGroup, setActiveGroup] = useState()
 
     const switchGroup = useCallback((title) => {
@@ -22,7 +28,9 @@ const MenuDropDown = ({ children }) => {
     return <MenuContext.Provider value={{activeGroup, setActiveGroup, switchGroup}}>{children}</MenuContext.Provider>
 }
 
-MenuDropDown.Group = function MenuGroup ({ children, title, placeholder }) {
+MenuDropDown.Group = function MenuGroup ({ children, title, placeholder }: Props) {
+    console.log(title, placeholder);
+    
     const [currentValue, setCurrentValue] = useState()
 
     const { activeGroup, setActiveGroup } = useContext(MenuContext)
