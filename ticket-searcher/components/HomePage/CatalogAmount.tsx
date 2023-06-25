@@ -15,7 +15,7 @@ export const CatalogAmount = ({id}) => {
     )
 
     return (
-        <div className={styles.buttons}>
+        <div className={`${styles.buttons}`}>
             <button type="button" className={styles.buttons__item} disabled={!productAmount} onClick={() => dispatch(cartActions.decrement(id))}>
                 <Image
                     priority

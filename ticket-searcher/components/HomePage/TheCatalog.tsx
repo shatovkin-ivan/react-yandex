@@ -2,7 +2,6 @@
 
 import styles from '../../assets/styles/HomePage/catalog.module.scss'
 
-import { useState, useEffect } from "react"
 import { CatalogItem } from "./CatalogItem"
 
 import { useGetMoviesQuery } from '../../store/services/movieApi'

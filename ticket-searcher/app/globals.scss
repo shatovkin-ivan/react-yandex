@@ -8,6 +8,8 @@
     --body-color: #F5F5F5;
     --orange: #FF5500;
     --orange-disabled: #FFA375;
+    --text-tertiary: #999FA6;
+    --border-default: #E1E3E6;
 
     --header-height: 84px;
     --footer-height: 86px;
@@ -87,6 +89,9 @@ button {
     cursor: pointer;
     display: block;
 }
+h1 {
+    margin: 0;
+}
 .main {
     padding-top: 84px;
 }
@@ -95,7 +100,6 @@ button {
     width: 100%;
     padding: 0 22px;
 }
-
 .dark {
     background-color: var(--dark-theme-color);
     color: var(--light-theme-color);
@@ -103,5 +107,19 @@ button {
 .light {
     background-color: var(--light-theme-color);
     color: var(--main-text-color);
+}
+.input {
+    position: relative;
+    display: block;
+    border: 1px solid var(--border-default);
+    border-radius: 8px;
+    width: 100%;
+    padding: 10px 16px;
+    font-family: var(--sf);
+    font-size: 1.4rem;
+    line-height: 1.43;
+    color: var(--text-tertiary);
+    background-color: transparent;
+    text-align: left;
 }
 

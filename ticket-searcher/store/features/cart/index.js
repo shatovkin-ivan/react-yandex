@@ -6,11 +6,11 @@ export const cartSlice = createSlice({
     name: 'cart',
     initialState,
     reducers: {
-        increment: (state, { payload  }) => {
+        increment: (state, { payload }) => {
             const count = state[payload] || 0
             state[payload] = count + 1
         },
-        decrement: (state, { payload  }) => {
+        decrement: (state, { payload }) => {
             const count = state[payload]
             if (!count) {
                 return;

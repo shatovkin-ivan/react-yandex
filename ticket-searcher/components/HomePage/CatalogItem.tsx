@@ -1,3 +1,4 @@
+import Link from 'next/link'
 import styles from '../../assets/styles/HomePage/card.module.scss'
 
 import { CatalogAmount } from './CatalogAmount'
@@ -9,9 +10,11 @@ export const CatalogItem = ({film}) => {
                 <img src={film.posterUrl} alt="" />
             </div>
             <div className={styles.filmCard__info}>
-                <p className={styles.filmCard__title}>
-                    {film.title}
-                </p>
+                <Link href={`film/${film.id}`}>
+                    <p className={styles.filmCard__title}>
+                        {film.title}
+                    </p>
+                </Link>
                 <p className={styles.filmCard__genre}>
                     {film.genre}
                 </p>

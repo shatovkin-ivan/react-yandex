@@ -1,0 +1,56 @@
+.section {
+  padding: 24px 0;
+}
+.card {
+  display: grid;
+  grid-template-columns: 400px auto;
+  gap: 32px;
+  border-radius: 8px;
+  padding: var(--default-padding);
+  &__info {
+    position: relative;
+  }
+  &__image {
+    border-radius: 8px;
+    overflow: hidden;
+    object-fit: cover;
+  }
+  &__title {
+    margin-bottom: var(--default-padding);
+    font-size: 3.2rem;
+    font-weight: 600;
+    line-height: 1;
+  }
+  &__list {
+    margin-bottom: 32px;
+  }
+  &__item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    &:not(:last-child) {
+      margin-bottom: 16px;
+    }
+  }
+  &__subtitle {
+    font-size: 2rem;
+    font-weight: 600;
+  }
+  &__data {
+    font-size: 2rem;
+  }
+  &__heading {
+    margin-bottom: 16px;
+    font-weight: 600;
+    font-size: 2rem;
+    line-height: 1.6;
+  }
+  &__description {
+    line-height: 1.5;
+  }
+  &__buttons {
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+}
