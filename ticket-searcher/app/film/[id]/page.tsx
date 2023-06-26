@@ -7,13 +7,13 @@ import { FilmReviews } from '../../../components/FilmPage/FilmReviews'
 
 export default function Film () {
     const params = useParams()
-
+    
     const { data, isLoading, error } = useGetMovieQuery(params.id)
     if (data) {
         return (
             <>
-                <FilmCard film={data}/>
-                <FilmReviews film={data} />
+                <FilmCard film={ data }/>
+                <FilmReviews film={ data } />
             </>
         )
     }  

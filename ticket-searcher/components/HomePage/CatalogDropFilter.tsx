@@ -1,8 +1,8 @@
-export const CatalogDropFilter = ({title}) => {
+export const CatalogDropFilter = ({ title }) => {
     return (
         <>
             <p>
-                {title}
+                { title }
             </p>
             <input type="text" />
         </>

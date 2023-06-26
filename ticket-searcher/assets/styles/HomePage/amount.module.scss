@@ -1,6 +1,7 @@
 .buttons {
     display: flex;
     align-items: center;
+    justify-content: flex-end;
     align-self: baseline;
     gap: 8px;
     user-select: none;
@@ -21,5 +22,17 @@
         font-size: 2rem;
         font-weight: 600;
         line-height: 1;
+    }
+    &__remove {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 20px;
+        height: 20px;
+        padding: 0;
+        margin-left: 16px;
+        background-color: transparent;
+        border: none;
+        cursor: pointer;
     }
 }

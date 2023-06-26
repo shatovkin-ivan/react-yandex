@@ -1,7 +1,7 @@
 .filmCard {
     display: grid;
     gap: var(--default-padding);
-    grid-template-columns: 100px auto 68px;
+    grid-template-columns: 100px auto 125px;
     border-radius: 8px;
     padding: var(--default-padding);
     &__poster {

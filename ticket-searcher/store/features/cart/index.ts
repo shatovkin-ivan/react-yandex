@@ -20,7 +20,8 @@ export const cartSlice = createSlice({
                 return;
             }
             state[payload] = count - 1
-        }
+        },
+        reset: () => initialState
     }
 })
 

@@ -1,20 +1,32 @@
 'use client'
 
+import { useEffect } from 'react'
+import { useDispatch, useSelector } from 'react-redux'
+
+import { filmsActions } from '../../store/features/films'
+import { CatalogItem } from "./CatalogItem"
+import { RootState } from '../../store/store'
 import styles from '../../assets/styles/HomePage/catalog.module.scss'
 
-import { CatalogItem } from "./CatalogItem"
-
-import { useGetMoviesQuery } from '../../store/services/movieApi'
-
 export const TheCatalog = () => {
-    const { data, isLoading, error } = useGetMoviesQuery()
 
+    const dispatch = useDispatch()
+    const films = useSelector((state: RootState) => state.films)
+
+    useEffect(() => {
+        fetch(`http://localhost:3001/api/movies`)
+        .then((response) => response.json())
+        .then((actualData) => {
+            if (!films.length) dispatch(filmsActions.getData(actualData))
+        } )
+    }, []);
+    
     return (
         <ul className={styles.catalog}>
             {
-                data && data.map((filmItem) => {
+                films && films.map((filmItem) => {
                     return (
-                        <CatalogItem key={filmItem.id} film={filmItem}/>
+                        <CatalogItem key={filmItem.id} film={filmItem} isBasket={false}/>
                     )
                 })
             }

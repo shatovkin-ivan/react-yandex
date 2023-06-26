@@ -3,7 +3,7 @@ import styles from '../../assets/styles/HomePage/card.module.scss'
 
 import { CatalogAmount } from './CatalogAmount'
 
-export const CatalogItem = ({film}) => {
+export const CatalogItem = ({ film, isBasket }) => {
     return (
         <li className={`${styles.filmCard} light`}>
             <div className={styles.filmCard__poster}>
@@ -19,7 +19,7 @@ export const CatalogItem = ({film}) => {
                     {film.genre}
                 </p>
             </div>
-            <CatalogAmount id={film.id}/>
+            <CatalogAmount id={film.id} isBasket={isBasket}/>
         </li>
     )
 }

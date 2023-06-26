@@ -4,13 +4,16 @@ import { configureStore } from "@reduxjs/toolkit"
 import { movieApi } from "./services/movieApi"
 
 import { cartReducer } from "./features/cart"
+import { filmsReducer } from './features/films'
 
 export const store = configureStore({
     reducer: {
         cart: cartReducer,
-        [movieApi.reducerPath]: movieApi.reducer
+        films: filmsReducer,
+        [movieApi.reducerPath]: movieApi.reducer,
     },
     middleware: (getDefaultMiddleware) => getDefaultMiddleware().concat([movieApi.middleware])
 })
 
-console.log(store.getState() );
+export type RootState = ReturnType<typeof store.getState>
+export type AppDispatch = typeof store.dispatch

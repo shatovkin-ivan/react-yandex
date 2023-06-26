@@ -1,0 +1,22 @@
+.section {
+    padding: var(--default-padding);
+}
+
+.about {
+    border-radius: 8px;
+    padding: var(--default-padding);
+    &__title {
+        margin-bottom: 16px;
+        font-size: 3.2rem;
+        font-weight: 600;
+        line-height: 1;
+    }
+    &__content {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+    }
+    &__text {
+        line-height: 1.5;
+    }
+}

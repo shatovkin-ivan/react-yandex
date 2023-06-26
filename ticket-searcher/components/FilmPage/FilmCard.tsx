@@ -2,7 +2,7 @@ import styles from '../../assets/styles/FilmPage/card.module.scss'
 
 import { CatalogAmount } from '../HomePage/CatalogAmount'
 
-export const FilmCard = ({film}) => {
+export const FilmCard = ({ film }) => {
   return (
     <section className={styles.section}>
       <div className="container">
@@ -10,7 +10,7 @@ export const FilmCard = ({film}) => {
         <img className={styles.card__image} src={film.posterUrl} alt={film.id}/>
         <div className={styles.card__info}>
           <div className={styles.card__buttons}>
-            <CatalogAmount id={film.id}/>
+            <CatalogAmount id={film.id} isBasket={false}/>
           </div>
           <h1 className={styles.card__title}>{film.title}</h1>
           <ul className={styles.card__list}>

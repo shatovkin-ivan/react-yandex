@@ -29,7 +29,6 @@ const MenuDropDown = ({ children }: Props) => {
 }
 
 MenuDropDown.Group = function MenuGroup ({ children, title, placeholder }: Props) {
-    console.log(title, placeholder);
     
     const [currentValue, setCurrentValue] = useState()
 

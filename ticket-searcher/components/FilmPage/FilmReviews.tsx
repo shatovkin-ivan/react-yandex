@@ -4,7 +4,7 @@ import { useEffect, useState } from 'react'
 import defaultAvatar from '../../public/images/default-avatar.svg'
 import Image from 'next/image'
 
-export const FilmReviews = ({film}) => {
+export const FilmReviews = ({ film }) => {
     const [reviews, setReviews] = useState()
 
     useEffect(() => {
@@ -13,8 +13,8 @@ export const FilmReviews = ({film}) => {
         .then(data => {
         setReviews(data)
         })
-    }, [])
-
+    }, [film.id])
+    
     return (
         <section className={styles.reviews}>
             <div className="container">
