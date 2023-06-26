@@ -108,6 +108,9 @@ h1 {
     background-color: var(--light-theme-color);
     color: var(--main-text-color);
 }
+.main {
+    min-height: calc(100vh - var(--footer-height));
+}
 .input {
     position: relative;
     display: block;

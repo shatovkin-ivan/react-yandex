@@ -5,6 +5,7 @@
     padding: var(--default-padding) 0;
     width: 100%;
     height: var(--header-height);
+    z-index: 10;
     &__wrap {
         display: flex;
         align-items: center;

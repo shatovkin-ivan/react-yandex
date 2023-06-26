@@ -1,13 +1,12 @@
-import styles from '../../assets/styles/HomePage/amount.module.scss'
-
 import Image from 'next/image'
+import { useDispatch, useSelector } from 'react-redux'
+
 import minusIcon from '../../public/icons/minus.svg'
 import plusIcon from '../../public/icons/plus.svg'
 import removeIcon from '../../public/icons/remove.svg'
-
-import { useDispatch, useSelector } from 'react-redux'
 import { selectProductAmount } from '../../store/features/cart/selector'
 import { cartActions } from '../../store/features/cart'
+import styles from '../../assets/styles/HomePage/amount.module.scss'
 
 export const CatalogAmount = ({id, isBasket}) => {
     const dispatch = useDispatch()
