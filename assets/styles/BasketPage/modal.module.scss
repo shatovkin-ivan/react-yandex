@@ -1,0 +1,65 @@
+.modal {
+    border-radius: 8px;
+    padding: var(--default-padding);
+    max-width: 344px;
+    width: 100%;
+    position: absolute;
+    top: calc(50% - 172px);
+    left: calc(50% - 150px);
+    z-index: 2;
+    &__wrap {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 16px;
+    }
+    &__close {
+        border: none;
+        width: 20px;
+        height: 20px;
+        position: relative;
+        background-color: transparent;
+        &::after {
+            content: '';
+            display: block;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 20px;
+            height: 20px;
+            background-image: url('../../../public/icons/remove.svg');
+        }
+    }
+    &__content {
+        margin-bottom: 24px;
+    }
+    &__buttons {
+        display: flex;
+        gap: 8px;
+    }
+    &__button {
+        padding: 10px 16px;
+        border-radius: 8px;
+        background-color: var(--light-theme-color);
+        color: var(--orange);
+        border: 1px solid var(--orange);
+        &:hover {
+            background-color: var(--orange);
+            color: var(--light-theme-color);
+        }
+        &_accept {
+            background-color: var(--orange);
+            color: var(--light-theme-color);
+        }
+    }
+}
+
+.overlay {
+    display: block;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    background-color: #000;
+    opacity: .5;
+}

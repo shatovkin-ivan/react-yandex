@@ -1,0 +1,44 @@
+.section {
+    padding: var(--default-padding) 0;
+}
+
+.questions {
+    &__head {
+        border-radius: 8px;
+        padding: var(--default-padding);
+        margin-bottom: var(--default-padding);
+    }
+    &__title {
+        font-size: 3.2rem;
+        font-weight: 600;
+    }
+    &__list {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+    }
+    &__item {
+        border-radius: 8px;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        gap: 16px;
+        padding: var(--default-padding);
+        cursor: pointer;
+    }
+    &__subtitle {
+        font-size: 2.4rem;
+        font-weight: 600;
+        line-height: 1.5;
+    }
+    &__toggle {
+        margin-left: auto;
+        &_open {
+            transform: rotate(180deg);
+        }
+    }
+    &__content {
+        padding-right: 64px;
+        width: 100%;
+    }
+}
